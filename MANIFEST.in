@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include liquidity_planning *.css
+recursive-include liquidity_planning *.csv
+recursive-include liquidity_planning *.html
+recursive-include liquidity_planning *.ico
+recursive-include liquidity_planning *.js
+recursive-include liquidity_planning *.json
+recursive-include liquidity_planning *.md
+recursive-include liquidity_planning *.png
+recursive-include liquidity_planning *.py
+recursive-include liquidity_planning *.svg
+recursive-include liquidity_planning *.txt
+recursive-exclude liquidity_planning *.pyc
