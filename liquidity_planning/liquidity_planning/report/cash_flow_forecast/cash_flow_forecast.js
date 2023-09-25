@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Liquidity Forecast"] = {
+frappe.query_reports["Cash Flow Forecast"] = {
 	formatter: function (value, row, column, data, default_formatter) {
 
 		value = default_formatter(value, row, column, data);

@@ -9,7 +9,7 @@ from frappe import _
 from frappe.utils import today
 
 
-class LiquidityForecast:
+class CashFlowForecast:
 	def __init__(self, filters):
 		self.filters = filters
 
@@ -725,4 +725,4 @@ class LiquidityForecast:
 
 
 def execute(filters=None):
-	return LiquidityForecast(filters).run()
+	return CashFlowForecast(filters).run()
