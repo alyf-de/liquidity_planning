@@ -1,11 +1,9 @@
-from . import __version__ as app_version
-
 app_name = "liquidity_planning"
 app_title = "Liquidity Planning"
 app_publisher = "ALYF GmbH"
 app_description = "-"
 app_email = "hallo@alyf.de"
-app_license = "-"
+app_license = "gpl-3.0"
 
 # Includes in <head>
 # ------------------
@@ -42,7 +40,7 @@ app_license = "-"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -56,8 +54,8 @@ app_license = "-"
 
 # add methods and filters to jinja environment
 # jinja = {
-#	"methods": "liquidity_planning.utils.jinja_methods",
-#	"filters": "liquidity_planning.utils.jinja_filters"
+# 	"methods": "liquidity_planning.utils.jinja_methods",
+# 	"filters": "liquidity_planning.utils.jinja_filters"
 # }
 
 # Installation
@@ -99,11 +97,11 @@ app_license = "-"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
+# 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # DocType Class
@@ -111,7 +109,7 @@ app_license = "-"
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -119,32 +117,32 @@ app_license = "-"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+# 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"liquidity_planning.tasks.all"
-#	],
-#	"daily": [
-#		"liquidity_planning.tasks.daily"
-#	],
-#	"hourly": [
-#		"liquidity_planning.tasks.hourly"
-#	],
-#	"weekly": [
-#		"liquidity_planning.tasks.weekly"
-#	],
-#	"monthly": [
-#		"liquidity_planning.tasks.monthly"
-#	],
+# 	"all": [
+# 		"liquidity_planning.tasks.all"
+# 	],
+# 	"daily": [
+# 		"liquidity_planning.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"liquidity_planning.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"liquidity_planning.tasks.weekly"
+# 	],
+# 	"monthly": [
+# 		"liquidity_planning.tasks.monthly"
+# 	],
 # }
 
 # Testing
@@ -156,14 +154,14 @@ app_license = "-"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "liquidity_planning.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "liquidity_planning.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "liquidity_planning.task.get_dashboard_data"
+# 	"Task": "liquidity_planning.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -189,29 +187,29 @@ app_license = "-"
 # --------------------
 
 # user_data_fields = [
-#	{
-#		"doctype": "{doctype_1}",
-#		"filter_by": "{filter_by}",
-#		"redact_fields": ["{field_1}", "{field_2}"],
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_2}",
-#		"filter_by": "{filter_by}",
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_3}",
-#		"strict": False,
-#	},
-#	{
-#		"doctype": "{doctype_4}"
-#	}
+# 	{
+# 		"doctype": "{doctype_1}",
+# 		"filter_by": "{filter_by}",
+# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_2}",
+# 		"filter_by": "{filter_by}",
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_3}",
+# 		"strict": False,
+# 	},
+# 	{
+# 		"doctype": "{doctype_4}"
+# 	}
 # ]
 
 # Authentication and authorization
 # --------------------------------
 
 # auth_hooks = [
-#	"liquidity_planning.auth.validate"
+# 	"liquidity_planning.auth.validate"
 # ]
