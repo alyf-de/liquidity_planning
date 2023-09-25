@@ -2,8 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
-from erpnext.accounts.report.financial_statements import (get_columns,
-                                                          get_period_list)
+from erpnext.accounts.report.financial_statements import get_columns, get_period_list
 from erpnext.accounts.report.utils import convert
 from frappe import _
 from frappe.utils import today
@@ -24,9 +23,7 @@ class CashFlowForecast:
 		)
 
 		self.filters.period_start_date = self.time_periods[0]["year_start_date"]
-		self.company_filter = (
-			{"company": self.filters.company} if self.filters.company else {}
-		)
+		self.company_filter = {"company": self.filters.company} if self.filters.company else {}
 
 	def run(self):
 		return (
@@ -101,9 +98,7 @@ class CashFlowForecast:
 		}
 
 		for key in [period["key"] for period in self.time_periods] + ["total"]:
-			self.income.update(
-				{key: (self.sales_orders.get(key, 0)) + (self.sales_invoices.get(key, 0))}
-			)
+			self.income.update({key: (self.sales_orders.get(key, 0)) + (self.sales_invoices.get(key, 0))})
 
 	def calculate_sales_orders(self):
 		self.sales_orders = {
@@ -232,9 +227,7 @@ class CashFlowForecast:
 				amount_tmp = 0.0
 
 				for schedule_detail in schedule_details:
-					if (
-						period["from_date"] <= schedule_detail["next_scheduled_date"] <= period["to_date"]
-					):
+					if period["from_date"] <= schedule_detail["next_scheduled_date"] <= period["to_date"]:
 						amount_tmp += sales_order.grand_total
 
 				if self.filters.presentation_currency != sales_order.currency:
@@ -385,9 +378,7 @@ class CashFlowForecast:
 
 			for purchase_order in purchase_orders:
 				amount_submitted_tmp = purchase_order["grand_total"]
-				amount_billed_tmp = (
-					purchase_order["grand_total"] * purchase_order["per_billed"] / 100
-				)
+				amount_billed_tmp = purchase_order["grand_total"] * purchase_order["per_billed"] / 100
 
 				if self.filters.presentation_currency != purchase_order.currency:
 					amount_submitted_tmp = convert(
@@ -452,9 +443,7 @@ class CashFlowForecast:
 				amount_tmp = 0.0
 
 				for schedule_detail in schedule_details:
-					if (
-						period["from_date"] <= schedule_detail["next_scheduled_date"] <= period["to_date"]
-					):
+					if period["from_date"] <= schedule_detail["next_scheduled_date"] <= period["to_date"]:
 						amount_tmp += purchase_order.grand_total
 
 				if self.filters.presentation_currency != purchase_order.currency:
@@ -664,9 +653,7 @@ class CashFlowForecast:
 		}
 
 		for key in [period["key"] for period in self.time_periods] + ["total"]:
-			self.net_cash_flow.update(
-				{key: (self.income.get(key, 0) - self.expenses.get(key, 0))}
-			)
+			self.net_cash_flow.update({key: (self.income.get(key, 0) - self.expenses.get(key, 0))})
 
 	def calculate_totals(self):
 		pass
