@@ -692,19 +692,19 @@ class CashFlowForecast:
 		return [
 			{
 				"value": self.total_income.get("total", 0),
-				"label": "Income",
+				"label": _("Income"),
 				"datatype": "Currency",
 				"currency": self.filters.presentation_currency,
 			},
 			{
 				"value": self.total_expenses.get("total", 0),
-				"label": "Expenses",
+				"label": _("Expenses"),
 				"datatype": "Currency",
 				"currency": self.filters.presentation_currency,
 			},
 			{
 				"value": self.net_cash_flow.get("total", 0),
-				"label": "Net Cash Flow",
+				"label": _("Net Cash Flow"),
 				"indicator": "Red" if self.net_cash_flow.get("total", 0) < 0 else "Green",
 				"datatype": "Currency",
 				"currency": self.filters.presentation_currency,
