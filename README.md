@@ -31,7 +31,7 @@ The report derives its data from various ERPNext modules, as outlined below.
 
 - Outstanding submitted **Purchase Orders**, as well as scheduled **Purchase Orders** using the "Auto Repeat" feature. Any billed orders are subtracted from the total to avoid double-counting.
 - Submitted **Sales Invoices**.
-- Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates. The average salary is calculated on a daily basis for the selected perios, hence the total might not add up to the exact amount (`salary = number_of_days * ctc / 30.438`).
+- Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates. The average salary is calculated on a daily basis for the selected period, hence the total might not add up to the exact amount (`salary = number_of_days * ctc / 30.438`).
 - Approved **Expense Claims**.
 
 ## Calculation Methods
