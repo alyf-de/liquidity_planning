@@ -27,17 +27,31 @@ class CashFlowForecast:
 
 	def run(self):
 		return (
-			get_columns(
-				self.filters.periodicity,
-				self.time_periods,
-				0,
-				company=self.filters.company,
-			),
+			self.get_columns(),
 			self.get_data(),
 			self.get_message(),
 			self.get_chart_data(),
 			self.get_report_summary(),
 		)
+
+	def get_columns(self):
+		columns = get_columns(
+			self.filters.periodicity,
+			self.time_periods,
+			0,
+			company=self.filters.company,
+		)
+
+		# `get_columns` returns a Link to Account as first column, but we want
+		# to display a Data column.
+		columns[0] = {
+			"fieldname": "account",
+			"label": _("Title"),
+			"fieldtype": "Data",
+			"width": 300,
+		}
+
+		return columns
 
 	def get_data(self):
 		empty_row = {
