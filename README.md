@@ -4,6 +4,9 @@ This app provides a report named "Cash Flow Forecast" that can be used for liqui
 
 ### Installation
 
+> [!NOTE]  
+> This app targets ERPNext version 14.
+
 You can install this app on you ERPNext instance using the [bench CLI](https://github.com/frappe/bench):
 
 ```bash
