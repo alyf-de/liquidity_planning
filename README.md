@@ -20,28 +20,28 @@ The "Cash Flow Forecast" report offers a detailed forecast of an organization's 
 
 ## Data Sources
 
-The report derives its data from various ERPNext modules, as outlined below:
+The report derives its data from various ERPNext modules, as outlined below.
 
-Income:
+### Income
 
-- Outstanding submitted **Sales Orders**, as well as scheduled **Sales Orders** using the "Auto Repeat" feature.
+- Submitted **Sales Orders**, as well as scheduled **Sales Orders** using the "Auto Repeat" feature. Any billed orders are subtracted from the total to avoid double-counting.
 - Submitted **Sales Invoices**.
 
-Expenses:
+### Expenses
 
-- Outstanding submitted **Purchase Orders**, as well as scheduled **Purchase Orders** using the "Auto Repeat" feature.
+- Outstanding submitted **Purchase Orders**, as well as scheduled **Purchase Orders** using the "Auto Repeat" feature. Any billed orders are subtracted from the total to avoid double-counting.
 - Submitted **Sales Invoices**.
 - Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates.
 - Approved **Expense Claims**.
-
-> [!NOTE]  
-> In order to see any "forecast", you first need to setup the "Auto Repeat" feature for your orders and enter employee salary data.
 
 ## Calculation Methods
 
 - The report calculates total income and expenses by aggregating values from sales and purchase orders, invoices, salaries, and expense claims.
 - Net cash flow is determined by subtracting total expenses from total income.
 - Currency conversions are applied where necessary, based on the presentation currency selected by the user.
+
+> [!NOTE]
+> In order to see any "forecast", you first need to setup the "Auto Repeat" feature for your orders and enter employee salary data.
 
 ## Report Filters
 
