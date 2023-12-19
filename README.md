@@ -21,15 +21,15 @@ The report derives its data from various ERPNext modules, as outlined below:
 
 Income:
 
-1. Outstanding submitted **Sales Orders**, as well as scheduled **Sales Orders** using the "Auto Repeat" feature.
-2. Submitted **Sales Invoices**.
+- Outstanding submitted **Sales Orders**, as well as scheduled **Sales Orders** using the "Auto Repeat" feature.
+- Submitted **Sales Invoices**.
 
 Expenses:
 
-4. Outstanding submitted **Purchase Orders**, as well as scheduled **Purchase Orders** using the "Auto Repeat" feature.
-5. Submitted **Sales Invoices**.
-6. Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates.
-7. Approved **Expense Claims**.
+- Outstanding submitted **Purchase Orders**, as well as scheduled **Purchase Orders** using the "Auto Repeat" feature.
+- Submitted **Sales Invoices**.
+- Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates.
+- Approved **Expense Claims**.
 
 #### Calculation Methods
 
