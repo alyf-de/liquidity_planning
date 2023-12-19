@@ -1,8 +1,8 @@
-### Liquidity Planning
+# Liquidity Planning
 
 This app provides a report named "Cash Flow Forecast" that can be used for liquidity planning in ERPNext.
 
-### Installation
+# Installation
 
 > [!NOTE]  
 > This app targets ERPNext version 14.
@@ -14,11 +14,11 @@ bench get-app https://github.com/alyf-de/liquidity_planning.git
 bench --site $MY_SITE install-app liquidity_planning
 ```
 
-### Description
+# Description
 
 The "Cash Flow Forecast" report offers a detailed forecast of an organization's cash flow, providing insights into its financial health. This section explains the data sources and methodology behind the report.
 
-#### Data Sources
+## Data Sources
 
 The report derives its data from various ERPNext modules, as outlined below:
 
@@ -34,13 +34,13 @@ Expenses:
 - Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates.
 - Approved **Expense Claims**.
 
-#### Calculation Methods
+## Calculation Methods
 
 - The report calculates total income and expenses by aggregating values from sales and purchase orders, invoices, salaries, and expense claims.
 - Net cash flow is determined by subtracting total expenses from total income.
 - Currency conversions are applied where necessary, based on the presentation currency selected by the user.
 
-#### Report Filters
+## Report Filters
 
 Users can customize the report using various filters:
 
@@ -49,7 +49,7 @@ Users can customize the report using various filters:
 - **Periodicity**: Select the frequency of the report (Monthly, Quarterly, Half-Yearly, Yearly).
 - **Currency**: Choose the presentation currency (e.g. EUR, USD).
 
-### License
+# License
 
 Copyright (C) 2023  ALYF GmbH and contributors
 
