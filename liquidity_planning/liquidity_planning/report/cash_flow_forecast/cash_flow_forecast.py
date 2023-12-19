@@ -676,16 +676,17 @@ class CashFlowForecast:
 			expense_values.append(f"{self.total_expenses.get(key, 0):.2f}")
 			net_cash_flow_values.append(f"{self.net_cash_flow.get(key, 0):.2f}")
 
-		datasets = [
-			{"name": "Income", "values": income_values},
-			{"name": "Expenses", "values": expense_values},
-			{"name": "Net Cash Flow", "values": net_cash_flow_values},
-		]
-
-		chart = {"data": {"labels": labels, "datasets": datasets}}
-		chart["type"] = "bar"
-
-		return chart
+		return {
+			"type": "bar",
+			"data": {
+				"labels": labels,
+				"datasets": [
+					{"name": "Income", "values": income_values},
+					{"name": "Expenses", "values": expense_values},
+					{"name": "Net Cash Flow", "values": net_cash_flow_values},
+				]
+			},
+		}
 
 	def get_report_summary(self):
 		return [
