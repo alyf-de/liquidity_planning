@@ -681,9 +681,9 @@ class CashFlowForecast:
 			"data": {
 				"labels": labels,
 				"datasets": [
-					{"name": "Income", "values": income_values},
-					{"name": "Expenses", "values": expense_values},
-					{"name": "Net Cash Flow", "values": net_cash_flow_values},
+					{"name": _("Income"), "values": income_values},
+					{"name": _("Expenses"), "values": expense_values},
+					{"name": _("Net Cash Flow"), "values": net_cash_flow_values},
 				]
 			},
 		}
