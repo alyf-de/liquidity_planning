@@ -34,6 +34,9 @@ Expenses:
 - Employee Salaries, calculated based on the _Cost To Company_ (`ctc`) field from the **Employee** DocType, considering joining and relieving dates.
 - Approved **Expense Claims**.
 
+> [!NOTE]  
+> In order to see any "forecast", you first need to setup the "Auto Repeat" feature for your orders and enter employee salary data.
+
 ## Calculation Methods
 
 - The report calculates total income and expenses by aggregating values from sales and purchase orders, invoices, salaries, and expense claims.
