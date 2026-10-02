@@ -234,7 +234,7 @@ class CashFlowForecast:
 				sales_order = frappe.get_doc("Sales Order", auto_repeat.reference_document)
 
 				if self.filters.company and sales_order.company != self.filters.company:
-					break
+					continue
 
 				schedule_details = auto_repeat_doc.get_auto_repeat_schedule()
 
@@ -450,7 +450,7 @@ class CashFlowForecast:
 				purchase_order = frappe.get_doc("Purchase Order", auto_repeat.reference_document)
 
 				if self.filters.company and purchase_order.company != self.filters.company:
-					break
+					continue
 
 				schedule_details = auto_repeat_doc.get_auto_repeat_schedule()
 
