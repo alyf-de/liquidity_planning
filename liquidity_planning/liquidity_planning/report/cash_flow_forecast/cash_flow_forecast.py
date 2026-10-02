@@ -698,7 +698,7 @@ class CashFlowForecast:
 					{"name": _("Income"), "values": income_values},
 					{"name": _("Expenses"), "values": expense_values},
 					{"name": _("Net Cash Flow"), "values": net_cash_flow_values},
-				]
+				],
 			},
 		}
 

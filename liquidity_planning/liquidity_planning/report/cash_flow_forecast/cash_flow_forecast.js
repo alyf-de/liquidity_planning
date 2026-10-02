@@ -4,22 +4,20 @@
 
 frappe.query_reports["Cash Flow Forecast"] = {
 	formatter: function (value, row, column, data, default_formatter) {
-
 		value = default_formatter(value, row, column, data);
 
-			value = $(`<span>${value}</span>`);
+		value = $(`<span>${value}</span>`);
 
-			var $value = $(value).css("font-weight", "normal");
-			if (data.warn_if_negative && data[column.fieldname] < 0) {
-				$value.addClass("text-danger");
-			}
+		var $value = $(value).css("font-weight", "normal");
+		if (data.warn_if_negative && data[column.fieldname] < 0) {
+			$value.addClass("text-danger");
+		}
 
-			if (data.bold) {
-				$value.css("font-weight", "bold");
-			}
+		if (data.bold) {
+			$value.css("font-weight", "bold");
+		}
 
-			value = $value.wrap("<p></p>").parent().html();
-
+		value = $value.wrap("<p></p>").parent().html();
 
 		return value;
 	},
