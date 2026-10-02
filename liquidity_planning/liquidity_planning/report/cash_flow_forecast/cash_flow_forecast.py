@@ -155,7 +155,7 @@ class CashFlowForecast:
 
 			filters.update(
 				{
-					"status": ["not in", "Draft, Cancelled"],
+					"status": ["not in", "Draft, Cancelled, Closed"],
 					"transaction_date": [
 						"between",
 						[period["from_date"], period["to_date"]],
@@ -371,7 +371,7 @@ class CashFlowForecast:
 
 			filters.update(
 				{
-					"status": ["not in", "Draft, Cancelled"],
+					"status": ["not in", "Draft, Cancelled, Closed"],
 					"transaction_date": [
 						"between",
 						[period["from_date"], period["to_date"]],
